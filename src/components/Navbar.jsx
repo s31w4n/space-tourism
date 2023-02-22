@@ -6,9 +6,9 @@ import "../style/Navbar.css";
 function Navbar() {
   return (
     <header className="primary-header flex">
-        <Link to="/" className="logo">
-          <img src={logo} alt="space tourism logo" />
-        </Link>
+      <Link to="/" className="logo">
+        <img src={logo} alt="space tourism logo" />
+      </Link>
       <button className="mobile-nav-toggle" aria-controls="primary-navigation">
         <span className="sr-only">Menu</span>
       </button>
@@ -21,7 +21,7 @@ function Navbar() {
           <li className="active">
             <Link
               className="ff-sans-cond uppercase text-white letter-spacing-2"
-              to="/space-tourism"
+              to="/"
             >
               <span aria-hidden="true">00</span>Home
             </Link>

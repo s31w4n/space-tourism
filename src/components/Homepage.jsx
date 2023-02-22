@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import "../style/Homepage.css";
 
 function Homepage() {
+  document.body.classList.remove("destination");
   document.body.classList.add("home");
+
   return (
     <main id="main" className="grid-container grid-container--home">
       <div className="flow">

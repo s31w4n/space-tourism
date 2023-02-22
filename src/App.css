@@ -94,7 +94,6 @@ body {
   background-position: bottom center;
 }
 
-
 /* make images easier to work with */
 /* img,
 picutre {
@@ -262,16 +261,20 @@ select {
 .fs-600 {
   line-height: 1.1;
 }
-
-.numbered-title {
-  font-family: var(--ff-sans-cond);
-  font-size: var(--fs-500);
-  text-transform: uppercase;
-  letter-spacing: 4.72px;
+.grid-container {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
 }
-
-.numbered-title span {
-  margin-right: 0.5em;
-  font-weight: 700;
-  color: hsl(var(--clr-white) / 0.25);
+@media (min-width: 48em) {
+  .grid-container {
+    text-align: left;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+        1rem,
+        1fr
+      );
+  }
 }
