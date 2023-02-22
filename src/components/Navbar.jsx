@@ -15,7 +15,6 @@ function Navbar() {
       <nav>
         <ul
           id="primary-navigation"
-          data-visible="false"
           className="primary-navigation underline-indicators flex"
         >
           <li className="active">

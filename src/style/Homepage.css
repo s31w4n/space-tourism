@@ -1,5 +1,8 @@
 .grid-container {
-  padding: 6rem 1rem 4rem 1rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding: 6rem 1rem 4rem 1rem !important;
 }
 
 .grid-container p:not([class]) {
@@ -41,6 +44,14 @@
 }
 
 @media (min-width: 48em) {
+  .grid-container {
+    text-align: left;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+        1rem,
+        1fr
+      );
+  }
   .grid-container--home > *:first-child {
     grid-column: 2;
   }

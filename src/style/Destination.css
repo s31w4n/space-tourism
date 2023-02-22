@@ -16,7 +16,11 @@
   }
 }
 .grid-container {
-  padding-top: 3rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
 }
 
 .grid-container p:not([class]) {
@@ -28,6 +32,7 @@
 }
 .grid-container--destination {
   --flow-space: 2rem;
+  padding-top: 2rem !important;
   grid-template-areas:
     "title"
     "image"
@@ -101,6 +106,11 @@
 }
 
 picture > img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
+}
+
+.active {
+  color: hsl(var(--clr-white) / 1);
+  border-color: hsl(var(--clr-white) / 1);
 }

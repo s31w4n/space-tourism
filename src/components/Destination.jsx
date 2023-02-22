@@ -8,12 +8,12 @@ import MoonWebp from "../assets/destination/image-moon.webp";
 function Destination() {
   document.body.classList.remove("home");
   document.body.classList.add("destination");
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(3);
   const { id, name, images, description, distance, travel } =
     destinations[value];
-  console.log(destinations[0]);
+  
   return (
-    <div>
+    <div className="destination-container">
       <main
         key={id}
         id="main"
@@ -27,7 +27,26 @@ function Destination() {
           <source srcSet={images.webp} type="image/webp" />
           <img src={images.png} alt={name} />
         </picture>
-        <div aria-label="destination list"></div>
+        <div
+          aria-label="destination list"
+          className="tab-list underline-indicators flex"
+          role="tablist"
+        >
+          {destinations.map((destinations, index) => {
+            const { name } = destinations;
+            return (
+              <button
+                aria-controls="moon-tab"
+                className={`"uppercase ff-sans-cond text-accent letter-spacing-2" ${
+                  index === value && "active"
+                } `}
+                onClick={() => setValue(index)}
+              >
+                {name}
+              </button>
+            );
+          })}
+        </div>
         <article className="destination-info flow">
           <h2 className="fs-800 uppercase ff-serif">{name}</h2>
           <p>{description}</p>
