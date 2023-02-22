@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Logo } from "../icons";
+import logo from "../assets/shared/logo.svg";
 import "../style/Navbar.css";
 
 function Navbar() {
   return (
     <header className="primary-header flex">
-      <div className="logo">
-        <Logo />
-      </div>
+        <Link to="/" className="logo">
+          <img src={logo} alt="space tourism logo" />
+        </Link>
       <button className="mobile-nav-toggle" aria-controls="primary-navigation">
         <span className="sr-only">Menu</span>
       </button>

@@ -1,4 +1,6 @@
-/* Custom properties */
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
 
 :root {
   /* colors */
@@ -43,7 +45,12 @@
   }
 }
 
-/* Reset */
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
 /* Box sizing */
 *,
 *::before,
@@ -82,18 +89,18 @@ body {
   background-color: hsl(var(--clr-dark));
   line-height: 1.5;
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: min-content 1fr;
-
   overflow-x: hidden;
+  background-size: cover;
+  background-position: bottom center;
 }
 
+
 /* make images easier to work with */
-img,
+/* img,
 picutre {
   max-width: 100%;
   display: block;
-}
+} */
 
 /* make form elements easier to work with */
 input,
@@ -101,6 +108,18 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ------------------- */
@@ -147,6 +166,21 @@ select {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+.skip-to-content {
+  position: absolute;
+  z-index: 9999;
+  background: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+  padding: 0.5em 1em;
+  margin-inline: auto;
+  transform: translateY(-100%);
+  transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
 }
 
 /* colors */
