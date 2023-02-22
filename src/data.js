@@ -9,7 +9,6 @@ import TitanWebp from "./assets/destination/image-titan.webp";
 
 export const destinations = [
   {
-    id: 1,
     name: "Moon",
     images: {
       png: MoonPng,
@@ -21,19 +20,17 @@ export const destinations = [
     travel: "3 days",
   },
   {
-    id: 2,
     name: "Mars",
     images: {
       png: MarsPng,
       webp: MarsWebp,
     },
     description:
-      "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
+      "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest! Mars has two small, irregularly shaped moons, Phobos and Deimos.",
     distance: "225 mil. km",
     travel: "9 months",
   },
   {
-    id: 3,
     name: "Europa",
     images: {
       png: EuropaPng,
@@ -45,7 +42,6 @@ export const destinations = [
     travel: "3 years",
   },
   {
-    id: 4,
     name: "Titan",
     images: {
       png: TitanPng,
