@@ -4,6 +4,8 @@ import "../style/Homepage.css";
 
 function Homepage() {
   document.body.classList.remove("destination");
+  document.body.classList.remove("crew");
+  document.body.classList.remove("technology");
   document.body.classList.add("home");
 
   return (

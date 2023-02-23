@@ -1,10 +1,11 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import "../style/Destination.css";
 import { destinations } from "../data";
 
 function Destination() {
   document.body.classList.remove("home");
+  document.body.classList.remove("crew");
+  document.body.classList.remove("technology");
   document.body.classList.add("destination");
   const [value, setValue] = useState(0);
   const { name, images, description, distance, travel } = destinations[value];
@@ -27,6 +28,7 @@ function Destination() {
             const { name } = destinations;
             return (
               <button
+                key={index}
                 className={`"uppercase ff-sans-cond text-accent letter-spacing-2" ${
                   index === value && "active"
                 } `}
