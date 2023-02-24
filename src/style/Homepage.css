@@ -2,7 +2,7 @@
   text-align: center;
   display: grid;
   place-items: center;
-  padding: 6rem 1rem 4rem 1rem !important;
+  padding: 4rem 1rem;
 }
 
 .grid-container p:not([class]) {
@@ -10,7 +10,8 @@
 }
 
 .grid-container--home {
-  align-items: end;
+  padding-top: 8rem !important;
+  align-items: end !important;
 }
 
 .large-button {

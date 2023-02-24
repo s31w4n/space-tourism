@@ -32,7 +32,7 @@
 }
 .grid-container--destination {
   --flow-space: 2rem;
-  padding-top: 2rem !important;
+  padding-top: 0 !important;
   grid-template-areas:
     "title"
     "image"

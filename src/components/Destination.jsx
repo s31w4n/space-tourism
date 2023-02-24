@@ -11,7 +11,6 @@ function Destination() {
   const { name, images, description, distance, travel } = destinations[value];
 
   return (
-    <div>
       <main className="grid-container grid-container--destination flow">
         <h1 className="numbered-title">
           <span aria-hidden="true">01</span> Pick your destination
@@ -54,7 +53,6 @@ function Destination() {
           </div>
         </article>
       </main>
-    </div>
   );
 }
 

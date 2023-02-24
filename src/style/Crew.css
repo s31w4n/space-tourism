@@ -52,8 +52,6 @@
 .grid-container--crew > picture {
   grid-area: image;
   max-width: 60% !important;
-
-  /* border-bottom: 1px solid hsl(var(--clr-white) / 0.1); */
 }
 
 .grid-container--crew > .dot-indicators {
@@ -89,7 +87,7 @@
   }
 }
 
-@media (min-width: 75em) {
+@media (min-width: 70em) {
   .grid-container {
     text-align: left;
     column-gap: var(--container-gap, 2rem);
@@ -100,7 +98,7 @@
   }
   .grid-container--crew {
     grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 30rem) minmax(
-        1rem,
+        0rem,
         1fr
       );
     justify-items: start;
@@ -112,6 +110,7 @@
 
   .grid-container--crew > picture {
     grid-column: span 2;
+    margin-left: 3.75em;
     align-self: start;
     max-width: 90%;
   }

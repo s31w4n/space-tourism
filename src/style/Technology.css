@@ -61,6 +61,7 @@
 
 .grid-container--technology > .technology-details {
   grid-area: content;
+  margin-bottom: 2rem;
 }
 
 .technology-details h2 {
@@ -115,14 +116,11 @@
   }
 
   .grid-container--technology > picture {
-    margin-top: 0;
-    justify-content: right !important;
-    max-width: 90% !important;
+    margin: 0 0 2rem 7rem;
   }
   .number-indicators > *:where(:not(:first-child)) {
     margin-top: 1rem;
   }
-
 }
 .number-indicators > * {
   font-family: var(--ff-serif);
