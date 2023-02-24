@@ -15,21 +15,7 @@
     background-image: url(../assets/destination/background-destination-desktop.jpg);
   }
 }
-.grid-container {
-  text-align: center;
-  display: grid;
-  place-items: center;
-  padding-inline: 1rem;
-  padding-bottom: 4rem;
-}
 
-.grid-container p:not([class]) {
-  max-width: 50ch;
-}
-
-.numbered-title {
-  grid-area: title;
-}
 .grid-container--destination {
   --flow-space: 2rem;
   padding-top: 0 !important;
@@ -73,9 +59,11 @@
         1fr
       );
   }
+
   .grid-container--destination {
     justify-items: start;
     align-content: start;
+    grid-column-gap: 4rem !important;
     grid-template-areas:
       ". title title ."
       ". image tabs ."
@@ -91,23 +79,6 @@
     --gap: min(6vw, 6rem);
     justify-content: start;
   }
-}
-.numbered-title {
-  font-family: var(--ff-sans-cond);
-  font-size: var(--fs-500);
-  text-transform: uppercase;
-  letter-spacing: 4.72px;
-}
-
-.numbered-title span {
-  margin-right: 0.5em;
-  font-weight: 700;
-  color: hsl(var(--clr-white) / 0.25);
-}
-
-picture > img {
-  max-width: 100%;
-  display: block;
 }
 
 .active {

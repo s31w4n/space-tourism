@@ -16,29 +16,7 @@
   }
 }
 
-.grid-container p:not([class]) {
-  max-width: 50ch;
-}
-
-.numbered-title {
-  grid-area: title;
-}
-
-.numbered-title {
-  font-family: var(--ff-sans-cond);
-  font-size: var(--fs-500);
-  text-transform: uppercase;
-  letter-spacing: 4.72px;
-}
-
-.numbered-title span {
-  margin-right: 0.5em;
-  font-weight: 700;
-  color: hsl(var(--clr-white) / 0.25);
-}
-
 /* technology layout */
-
 .grid-container--technology {
   padding-top: 2rem !important;
   padding-inline: 0 !important;
