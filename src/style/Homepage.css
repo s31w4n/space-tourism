@@ -81,9 +81,9 @@ body {
   }
 }
 
-@media (max-width: 48em) {
+@media (max-width: 45em) {
   .explore {
-    margin-top: 4rem;
+    margin-top: 6rem;
     justify-content: left;
   }
 }

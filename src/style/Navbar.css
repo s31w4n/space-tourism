@@ -52,7 +52,7 @@
 
   .primary-navigation.underline-indicators > .active {
     border-bottom: 0;
-    border-right: 0.2rem solid hsl(var(--clr-white) / 1);
+    border-right: .25rem solid hsl(var(--clr-white) / 1);
   }
 
   .mobile-nav-toggle {
@@ -84,12 +84,6 @@
 @media (min-width: 45.1em) {
   .primary-navigation {
     padding-inline: clamp(3rem, 7vw, 7rem);
-  }
-}
-
-@media (min-width: 35em) and (max-width: 45.1em) {
-  .primary-navigation a > span {
-    display: none;
   }
 }
 
