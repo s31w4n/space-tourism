@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
     <header className="primary-header flex">
-      <Link to="/" className="logo">
+      <Link to="/" className="logo" onClick={() => setValue(0)}>
         <img src={logo} alt="space tourism logo" />
       </Link>
       <button
@@ -38,7 +38,7 @@ function Navbar() {
           {navItems.map((item, index) => {
             const { order, name, href } = item;
             return (
-              <li className={`${index === value && "active"}`}>
+              <li key={index} className={`${index === value && "active"}`}>
                 <Link
                   className="ff-sans-cond uppercase text-white letter-spacing-2"
                   to={href}
