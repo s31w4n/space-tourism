@@ -1,54 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { navItems } from "../data";
 import logo from "../assets/shared/logo.svg";
 import "../style/Navbar.css";
 
 function Navbar() {
+  const [value, setValue] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleLinkClick = () => {
+    if (window.innerWidth <= 560) {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <header className="primary-header flex">
       <Link to="/" className="logo">
         <img src={logo} alt="space tourism logo" />
       </Link>
-      <button className="mobile-nav-toggle" aria-controls="primary-navigation">
-        <span className="sr-only">Menu</span>
-      </button>
+      <button
+        className="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded={isOpen ? "true" : "false"}
+        onClick={toggleNav}
+      ></button>
       <nav>
         <ul
           id="primary-navigation"
+          data-visible={isOpen ? "true" : "false"}
           className="primary-navigation underline-indicators flex"
         >
-          <li className="active">
-            <Link
-              className="ff-sans-cond uppercase text-white letter-spacing-2"
-              to="/"
-            >
-              <span aria-hidden="true">00</span>Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="ff-sans-cond uppercase text-white letter-spacing-2"
-              to="/destination"
-            >
-              <span aria-hidden="true">01</span>Destination
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="ff-sans-cond uppercase text-white letter-spacing-2"
-              to="/crew"
-            >
-              <span aria-hidden="true">02</span>Crew
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="ff-sans-cond uppercase text-white letter-spacing-2"
-              to="/technology"
-            >
-              <span aria-hidden="true">03</span>Technology
-            </Link>
-          </li>
+          {navItems.map((item, index) => {
+            const { order, name, href } = item;
+            return (
+              <li className={`${index === value && "active"}`}>
+                <Link
+                  className="ff-sans-cond uppercase text-white letter-spacing-2"
+                  to={href}
+                  onClick={() => {
+                    setValue(index);
+                    handleLinkClick();
+                  }}
+                >
+                  <span aria-hidden="true">0{order}</span>
+                  {name}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>

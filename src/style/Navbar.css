@@ -38,7 +38,8 @@
     z-index: 10;
     inset: 0 0 0 30%;
     list-style: none;
-    padding: min(20rem, 15vh) 2rem;
+    padding: min(20rem, 15vh) 0;
+    padding-left: 2rem;
     margin: 0;
     flex-direction: column;
     transform: translateX(100%);
@@ -50,7 +51,8 @@
   }
 
   .primary-navigation.underline-indicators > .active {
-    border: 0;
+    border-bottom: 0;
+    border-right: 0.2rem solid hsl(var(--clr-white) / 1);
   }
 
   .mobile-nav-toggle {
@@ -66,6 +68,7 @@
     width: 1.5rem;
     aspect-ratio: 1;
     border: 0;
+    cursor: pointer;
   }
 
   .mobile-nav-toggle[aria-expanded="true"] {
@@ -133,5 +136,3 @@
 .tab-list {
   --gap: 2rem;
 }
-
-

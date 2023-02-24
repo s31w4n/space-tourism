@@ -35,7 +35,6 @@ function Technology() {
       </h1>
       <div className="number-indicators" aria-label="crew member list">
         {technology.map((tech, index) => {
-          const { name } = technology;
           return (
             <button
               key={index}
