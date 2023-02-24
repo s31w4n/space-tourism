@@ -1,3 +1,4 @@
+// Import Destination Images
 import MoonPng from "./assets/destination/image-moon.png";
 import MoonWebp from "./assets/destination/image-moon.webp";
 import MarsPng from "./assets/destination/image-mars.png";
@@ -6,6 +7,7 @@ import EuropaPng from "./assets/destination/image-europa.png";
 import EuropaWebp from "./assets/destination/image-europa.webp";
 import TitanPng from "./assets/destination/image-titan.png";
 import TitanWebp from "./assets/destination/image-titan.webp";
+// Import Crew Images
 import DouglasHurleyPng from "./assets/crew/image-douglas-hurley.png";
 import DouglasHurleyWebp from "./assets/crew/image-douglas-hurley.webp";
 import MarkShuttleworthPng from "./assets/crew/image-mark-shuttleworth.png";
@@ -14,6 +16,7 @@ import VictorGloverPng from "./assets/crew/image-victor-glover.png";
 import VictorGloverWebp from "./assets/crew/image-victor-glover.webp";
 import AnoushehAnsariPng from "./assets/crew/image-anousheh-ansari.png";
 import AnoushehAnsariWebp from "./assets/crew/image-anousheh-ansari.webp";
+// Import Technology Images
 import LaunchvehiclePortrait from "./assets/technology/image-launch-vehicle-portrait.jpg";
 import LaunchvehicleLandscape from "./assets/technology/image-launch-vehicle-landscape.jpg";
 import SpaceportPortrait from "./assets/technology/image-spaceport-portrait.jpg";
@@ -135,6 +138,7 @@ export const technology = [
   },
 ];
 
+// Export Navbar data Items
 export const navItems = [
   {
     order: 0,
