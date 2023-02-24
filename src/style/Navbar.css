@@ -31,7 +31,7 @@
   display: none;
 }
 
-@media (max-width: 35rem) {
+@media (max-width: 45rem) {
   .primary-navigation {
     --underline-gap: 0.5rem;
     position: fixed;
@@ -81,19 +81,19 @@
   }
 }
 
-@media (min-width: 35em) {
+@media (min-width: 45.1em) {
   .primary-navigation {
     padding-inline: clamp(3rem, 7vw, 7rem);
   }
 }
 
-@media (min-width: 35em) and (max-width: 44.999em) {
+@media (min-width: 35em) and (max-width: 45.1em) {
   .primary-navigation a > span {
     display: none;
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 45.1em) {
   .primary-header::after {
     content: "";
     display: block;

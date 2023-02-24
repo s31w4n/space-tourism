@@ -13,7 +13,7 @@ function Navbar() {
   };
 
   const handleLinkClick = () => {
-    if (window.innerWidth <= 560) {
+    if (window.innerWidth <= 720) {
       setIsOpen(false);
     }
   };
