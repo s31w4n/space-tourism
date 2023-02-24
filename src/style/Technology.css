@@ -67,6 +67,9 @@
   .grid-container--technology > picture {
     max-width: 100% !important;
   }
+  .grid-container--technology .number-title {
+    justify-self: center !important;
+  }
 }
 
 @media (min-width: 75em) {

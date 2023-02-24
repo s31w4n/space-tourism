@@ -45,7 +45,7 @@
 }
 
 @media (min-width: 45em) {
-  .numbered-title {
+  .grid-container--crew .numbered-title {
     justify-self: start;
     margin-top: 2rem;
   }
