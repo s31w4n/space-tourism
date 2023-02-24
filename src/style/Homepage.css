@@ -43,7 +43,7 @@
   transform: scale(1.5);
 }
 
-@media (min-width: 48em) {
+@media (min-width: 45em) {
   .grid-container {
     text-align: left;
     column-gap: var(--container-gap, 2rem);
@@ -58,12 +58,15 @@
 
   .grid-container--home > *:last-child {
     grid-column: 3;
+    grid-column: span 2;
+    text-align: left;
   }
 }
 
 @media (max-width: 48em) {
   .explore {
     margin-top: 4rem;
+    justify-content: left;
   }
 }
 
