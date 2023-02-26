@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navItems } from "../data";
 import logo from "../assets/shared/logo.svg";
 import "../style/Navbar.css";
 
 function Navbar() {
-  const [value, setValue] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
@@ -20,32 +21,37 @@ function Navbar() {
 
   return (
     <header className="primary-header flex">
-      <Link to="/" className="logo" onClick={() => setValue(0)}>
+      <Link
+        to="/"
+        className="logo"
+        onClick={() => {
+          navigate("/");
+          handleLinkClick();
+        }}
+      >
         <img src={logo} alt="space tourism logo" />
       </Link>
       <button
         className="mobile-nav-toggle"
         aria-controls="primary-navigation"
-        aria-expanded={isOpen ? "true" : "false"}
+        aria-expanded={isOpen}
         onClick={toggleNav}
       ></button>
       <nav>
         <ul
           id="primary-navigation"
-          data-visible={isOpen ? "true" : "false"}
+          data-visible={isOpen}
           className="primary-navigation underline-indicators flex"
         >
           {navItems.map((item, index) => {
             const { order, name, href } = item;
+            const isActive = location.pathname === href;
             return (
-              <li key={index} className={`${index === value && "active"}`}>
+              <li key={index} className={`${isActive ? "active" : ""}`}>
                 <Link
                   className="ff-sans-cond uppercase text-white letter-spacing-2"
                   to={href}
-                  onClick={() => {
-                    setValue(index);
-                    handleLinkClick();
-                  }}
+                  onClick={handleLinkClick}
                 >
                   <span aria-hidden="true">0{order}</span>
                   {name}
