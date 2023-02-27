@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Homepage from "./components/Homepage";
-import Destination from "./components/Destination";
-import Crew from "./components/Crew";
-import Technology from "./components/Technology";
+import Homepage from "./pages/Homepage";
+import Destination from "./pages/Destination";
+import Crew from "./pages/Crew";
+import Technology from "./pages/Technology";
 import "./App.css";
 
 function App() {
