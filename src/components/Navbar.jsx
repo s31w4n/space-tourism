@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { navItems } from "../data";
 import logo from "../assets/shared/logo.svg";
 import "../style/Navbar.css";
@@ -48,14 +48,14 @@ function Navbar() {
             const isActive = location.pathname === href;
             return (
               <li key={index} className={`${isActive ? "active" : ""}`}>
-                <Link
+                <NavLink
                   className="ff-sans-cond uppercase text-white letter-spacing-2"
                   to={href}
                   onClick={handleLinkClick}
                 >
                   <span aria-hidden="true">0{order}</span>
                   {name}
-                </Link>
+                </NavLink>
               </li>
             );
           })}
