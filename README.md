@@ -12,7 +12,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://seiwan-khalni-space-tourism.netlify.app/)
+- Live Site URL: [Live Demo](https://seiwan-khalni-space-tourism.netlify.app/)
 
 ### Built with
 
