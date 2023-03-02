@@ -22,5 +22,6 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
